@@ -7,4 +7,31 @@
     android:layout_height="match_parent"
     tools:context=".PrivacyAndSupport">
 
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/login_bg"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="182dp"
+        android:layout_height="41dp"
+        android:text="Privacy and Support"
+        android:textColor="#949494"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="75dp"
+        android:layout_height="33dp"
+        android:text="Support"
+        android:textColor="#949494"
+        android:textSize="15sp"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="78dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
