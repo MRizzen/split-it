@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void GetStarted (View view) {
-        // Do something in response to button click
         Intent intent = new Intent(this, Home.class);
         startActivity(intent);
     }

@@ -37,7 +37,7 @@
         app:layout_constraintVertical_bias="0.226" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/signupbtn"
         android:layout_width="119dp"
         android:layout_height="33dp"
         android:backgroundTint="#4BF8F8F8"
@@ -62,7 +62,7 @@
         app:srcCompat="@drawable/defaultpic" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/fullname"
 
         android:layout_width="232dp"
         android:layout_height="29dp"
@@ -78,7 +78,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/password"
         android:layout_width="232dp"
         android:layout_height="29dp"
         android:ems="10"
@@ -93,7 +93,7 @@
         app:layout_constraintVertical_bias="0.606" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/confirmpassword"
         android:layout_width="232dp"
         android:layout_height="29dp"
         android:ems="10"
@@ -108,11 +108,15 @@
         app:layout_constraintVertical_bias="0.658" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/birthdate"
         android:layout_width="232dp"
         android:layout_height="29dp"
         android:ems="10"
         android:inputType="date"
+        android:textColor="#949494"
+        android:textSize="8sp"
+        android:focusable="false"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.692"
@@ -121,7 +125,7 @@
         app:layout_constraintVertical_bias="0.709" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/email"
         android:layout_width="232dp"
         android:layout_height="29dp"
         android:ems="10"
@@ -216,5 +220,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
         app:srcCompat="@drawable/outline_arrow_left_24" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.898" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
