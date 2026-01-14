@@ -1,10 +1,8 @@
 package com.example.splititapp;
 
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-
 import com.example.splititapp.fragments.SettingsPage;
 import com.example.splititapp.fragments.AddPage;
 import com.example.splititapp.fragments.HomePage;
@@ -22,13 +20,13 @@ public class Home extends AppCompatActivity {
         bottomNav.setSelectedItemId(R.id.nav_home);
         bottomNav.setOnItemSelectedListener(navListener);
 
+        // Initial fragment
         Fragment selectedFragment = new HomePage();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
     }
 
     private NavigationBarView.OnItemSelectedListener navListener = item -> {
         int itemId = item.getItemId();
-
         Fragment selectedFragment = null;
 
         if (itemId == R.id.nav_home) {
@@ -38,7 +36,10 @@ public class Home extends AppCompatActivity {
         } else if (itemId == R.id.nav_account) {
             selectedFragment = new SettingsPage();
         }
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+
+        if (selectedFragment != null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+        }
 
         return true;
     };

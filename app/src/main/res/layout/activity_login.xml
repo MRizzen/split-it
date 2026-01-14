@@ -108,7 +108,7 @@
         app:layout_constraintVertical_bias="0.435" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/createbtn"
         android:layout_width="126dp"
         android:layout_height="30dp"
         android:backgroundTint="#00F8F8F8"
@@ -136,16 +136,17 @@
         app:layout_constraintVertical_bias="0.705" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/logInbtn"
         android:layout_width="89dp"
         android:layout_height="30dp"
         android:backgroundTint="#4BF8F8F8"
-        android:text="Continue"
+        android:text="Login"
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.667" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
