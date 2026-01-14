@@ -1,3 +1,3 @@
-Database: XAMPP
+Database App: XAMPP
 
-Add contents from "split_it" folder to Disk Drive/xampp/htdocs
+Copy contents from "split_it" folder to C:/xampp/htdocs
