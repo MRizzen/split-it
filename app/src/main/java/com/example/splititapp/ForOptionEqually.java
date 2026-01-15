@@ -70,30 +70,26 @@ public class ForOptionEqually extends AppCompatActivity {
 
     private void saveAndReturn() {
         ArrayList<String> names = new ArrayList<>();
-        ArrayList<String> amounts = new ArrayList<>(); // 1. Create the amounts list
+        ArrayList<String> amounts = new ArrayList<>();
 
         int personCount = containerLayout.getChildCount();
         if (personCount == 0) return;
 
-        // Calculate the share again just to be 100% sure it's accurate
         double share = totalBill / personCount;
         String shareString = String.format("%.2f", share);
 
         for (int i = 0; i < personCount; i++) {
             View row = containerLayout.getChildAt(i);
 
-            // Collect Name
             EditText nameInput = row.findViewById(R.id.personName);
             String name = nameInput.getText().toString().trim();
             names.add(name.isEmpty() ? "Person " + (i + 1) : name);
 
-            // 2. Add the share to our amounts list
             amounts.add(shareString);
         }
 
         Intent resultIntent = new Intent();
         resultIntent.putStringArrayListExtra("split_names", names);
-        // 3. Send the amounts list back to AddPage
         resultIntent.putStringArrayListExtra("split_amounts", amounts);
 
         setResult(RESULT_OK, resultIntent);

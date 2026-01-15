@@ -48,21 +48,19 @@ public class BillAdapter extends RecyclerView.Adapter<BillAdapter.BillViewHolder
         holder.progressText.setText(paid + "/" + total);
 
         if (isHistory) {
-            // --- HISTORY SCREEN LOGIC ---
-            holder.btnRemove.setVisibility(View.GONE);
-            holder.itemView.setAlpha(0.75f); // Make it look archived
 
-            // Allow clicking to see "Who Paid", but tell Details page it's Read-Only
+            holder.btnRemove.setVisibility(View.GONE);
+            holder.itemView.setAlpha(0.75f);
+
             holder.itemView.setOnClickListener(v -> {
                 Intent intent = new Intent(v.getContext(), BillDetailsActivity.class);
                 intent.putExtra("BILL_ID", bill.getId());
-                intent.putExtra("IS_HISTORY", true); // Pass the flag
+                intent.putExtra("IS_HISTORY", true);
                 v.getContext().startActivity(intent);
                 Toast.makeText(v.getContext(), "Viewing Archived Bill (Read-Only)", Toast.LENGTH_SHORT).show();
             });
 
         } else {
-            // --- HOME SCREEN LOGIC ---
             holder.btnRemove.setVisibility(View.VISIBLE);
             holder.itemView.setAlpha(1.0f);
 

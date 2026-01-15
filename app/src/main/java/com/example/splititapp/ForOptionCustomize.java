@@ -61,7 +61,6 @@ public class ForOptionCustomize extends AppCompatActivity {
         View rowView = getLayoutInflater().inflate(R.layout.row_person, null);
         EditText amountInput = rowView.findViewById(R.id.splitAmount);
 
-        // Add this TextWatcher to listen for typing
         amountInput.addTextChangedListener(new android.text.TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -69,7 +68,7 @@ public class ForOptionCustomize extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {}
             @Override
             public void afterTextChanged(android.text.Editable s) {
-                updateRemainingText(); // Re-calculate every time user types
+                updateRemainingText();
             }
         });
 

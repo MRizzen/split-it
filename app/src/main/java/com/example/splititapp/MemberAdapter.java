@@ -39,10 +39,10 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberView
         holder.balance.setText(balanceText);
 
         if (member.getPaidAmount() >= member.getTotalAmount()) {
-            holder.balance.setTextColor(android.graphics.Color.parseColor("#4CAF50")); // Green
-            holder.btnPay.setVisibility(View.GONE); // Hide button if already paid
+            holder.balance.setTextColor(android.graphics.Color.parseColor("#4CAF50"));
+            holder.btnPay.setVisibility(View.GONE);
         } else {
-            holder.balance.setTextColor(android.graphics.Color.parseColor("#73000000")); // Grey
+            holder.balance.setTextColor(android.graphics.Color.parseColor("#73000000"));
             holder.btnPay.setVisibility(View.VISIBLE);
         }
 

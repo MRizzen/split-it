@@ -1,7 +1,7 @@
 package com.example.splititapp;
 
 import android.os.Bundle;
-import android.os.Handler; // Required for delay
+import android.os.Handler;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -155,8 +155,6 @@ public class BillDetailsActivity extends AppCompatActivity {
                     .setMessage("Everyone has paid. This bill has been automatically moved to History.")
                     .setCancelable(false)
                     .setPositiveButton("OK", (dialog, which) -> {
-                        // ADDED 500ms DELAY: Gives the database time to finish
-                        // the status update before we go back and refresh the Home screen.
                         new Handler().postDelayed(this::finish, 500);
                     })
                     .show();

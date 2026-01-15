@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.748">
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/privacybtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#00FFFFFF"
@@ -28,7 +28,7 @@
             android:textColor="#000000" />
 
         <Button
-            android:id="@+id/button11"
+            android:id="@+id/termsbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#00FFFFFF"
@@ -63,7 +63,7 @@
         app:layout_constraintVertical_bias="0.283">
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/faqsbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#00FFFFFF"
@@ -72,7 +72,7 @@
             android:textColor="#000000" />
 
         <Button
-            android:id="@+id/button11"
+            android:id="@+id/contactbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#00FFFFFF"
@@ -81,7 +81,7 @@
             android:textColor="#000000" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/reportbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#00FFFFFF"
@@ -104,7 +104,7 @@
         app:layout_constraintVertical_bias="0.175" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/backbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"

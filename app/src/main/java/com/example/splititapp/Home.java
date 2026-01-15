@@ -20,7 +20,6 @@ public class Home extends AppCompatActivity {
         bottomNav.setSelectedItemId(R.id.nav_home);
         bottomNav.setOnItemSelectedListener(navListener);
 
-        // Initial fragment
         Fragment selectedFragment = new HomePage();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
     }

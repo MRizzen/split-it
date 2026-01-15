@@ -31,8 +31,6 @@ public class HistoryActivity extends AppCompatActivity {
 
         historyList = new ArrayList<>();
 
-        // FIX: Added 'true' here to tell the adapter this is the History screen.
-        // This disables the "Pay" functionality as you requested.
         adapter = new BillAdapter(historyList, true);
         recyclerView.setAdapter(adapter);
 
