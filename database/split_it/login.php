@@ -10,7 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email    = $_POST['email'];
     $password = $_POST['password'];
 
-    // Secure the input slightly to prevent crashes
     $email = mysqli_real_escape_string($conn, $email);
     $password = mysqli_real_escape_string($conn, $password);
 
@@ -20,11 +19,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
         
-        // Use json_encode so Android can parse it as a JSONObject
         echo json_encode([
             "status" => "success",
             "message" => "Login Successful",
-            "id" => $row['id'] // This sends the user's ID back to Java
+            "id" => $row['id'] 
         ]);
     } else {
         echo json_encode([

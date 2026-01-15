@@ -54,19 +54,15 @@ public class Login extends AppCompatActivity {
                         String message = obj.getString("message");
 
                         if (message.toLowerCase().contains("success")) {
-                            // 1. Get the User ID from PHP
                             String userId = obj.getString("id");
 
-                            // DEBUG: This will show you in Logcat if the ID is actually found
                             Log.d("LOGIN_DEBUG", "Saving User ID: " + userId);
 
-                            // 2. Save to SharedPreferences
                             SharedPreferences pref = getSharedPreferences("UserPrefs", MODE_PRIVATE);
                             SharedPreferences.Editor editor = pref.edit();
                             editor.putString("user_id", userId);
                             editor.apply();
 
-                            // 3. Move to MainActivity
                             Intent intent = new Intent(Login.this, MainActivity.class);
                             startActivity(intent);
                             finish();

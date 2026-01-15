@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db   = "split_itdb"; // Ensure this matches your database name
+$db   = "split_itdb";
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 
@@ -11,21 +11,18 @@ if (!$conn) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Check if user_id was sent from Android
     if (isset($_POST['user_id'])) {
         $userId = mysqli_real_escape_string($conn, $_POST['user_id']);
 
-        // Query the database for this specific user
         $sql = "SELECT * FROM users WHERE id = '$userId'";
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_assoc($result);
 
-            // Send back JSON with keys that match your Java (optString/getString)
             echo json_encode([
                 "status" => "success",
-                "fullname" => $row['fullname'], // Ensure column name is 'fullname' in DB
+                "fullname" => $row['fullname'], 
                 "email" => $row['email'],
                 "birthdate" => $row['birthdate'],
                 "password" => $row['password']

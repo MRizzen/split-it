@@ -34,7 +34,6 @@ public class Accounts extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accounts);
 
-        // 1. Initialize SharedPreferences
         SharedPreferences pref = getSharedPreferences("UserPrefs", MODE_PRIVATE);
         userId = pref.getString("user_id", null);
 
@@ -44,7 +43,6 @@ public class Accounts extends AppCompatActivity {
             return;
         }
 
-        // 2. Initialize Views
         etName = findViewById(R.id.etName);
         etEmail = findViewById(R.id.etEmail);
         etBirthdate = findViewById(R.id.etBirthdate);
@@ -56,7 +54,6 @@ public class Accounts extends AppCompatActivity {
         btnBack = findViewById(R.id.btnBack);
         Button btnLogout = findViewById(R.id.logoutbtn);
 
-        // 3. Initial state: Fields disabled
         toggleFields(false);
 
         // 4. Back Button Logic
@@ -64,7 +61,6 @@ public class Accounts extends AppCompatActivity {
             btnBack.setOnClickListener(v -> finish());
         }
 
-        // 5. Logout Logic
         btnLogout.setOnClickListener(v -> {
             new AlertDialog.Builder(this)
                     .setTitle("Logout")
@@ -89,7 +85,6 @@ public class Accounts extends AppCompatActivity {
             toggleFields(isEditMode);
         });
 
-        // 6. Save Logic with Confirmation Dialog
         btnSave.setOnClickListener(v -> {
             new AlertDialog.Builder(this)
                     .setTitle("Save Changes")

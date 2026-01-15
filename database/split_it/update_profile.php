@@ -3,13 +3,11 @@ header('Content-Type: application/json');
 
 $conn = new mysqli("localhost", "root", "", "split_itdb");
 
-// Check connection
 if ($conn->connect_error) {
     die(json_encode(["status" => "error", "message" => "Connection failed"]));
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Escape strings to prevent SQL errors and basic injection
     $user_id   = $conn->real_escape_string($_POST['user_id']);
     $fullname  = $conn->real_escape_string($_POST['fullname']);
     $email     = $conn->real_escape_string($_POST['email']);
